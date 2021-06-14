@@ -1,0 +1,253 @@
+<!--
+
+@license Apache-2.0
+
+Copyright (c) 2020 The Stdlib Authors.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+
+# nextGraphemeClusterBreak
+
+[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] [![dependencies][dependencies-image]][dependencies-url]
+
+> Return the next extended grapheme cluster break in a string after a specified position.
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- Package usage documentation. -->
+
+<section class="installation">
+
+## Installation
+
+```bash
+npm install @stdlib/string-next-grapheme-cluster-break
+```
+
+</section>
+
+<section class="usage">
+
+## Usage
+
+```javascript
+var nextGraphemeClusterBreak = require( '@stdlib/string-next-grapheme-cluster-break' );
+```
+
+#### nextGraphemeClusterBreak( string\[, fromIndex] )
+
+Returns the next extended grapheme cluster break in a string after a specified position.
+
+```javascript
+var out = nextGraphemeClusterBreak( 'last man standing' );
+// returns 1
+```
+
+By default, the function searches for a grapheme cluster break starting from the first index. To specify an alternative starting search index, provide a `fromIndex` argument.
+
+```javascript
+var out = nextGraphemeClusterBreak( 'last man standing', 4 );
+// returns 5
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+## Notes
+
+-   If `string` is an empty string, the function returns `-1` irrespective of `fromIndex`.
+-   If an extended grapheme cluster break does not exist after `fromIndex`, the function returns `-1`.
+-   Note that `fromIndex` does **not** refer to a visual character position, but to an index in the ordered sequence of [UTF-16][utf-16] code units.
+
+</section>
+
+<!-- /.notes -->
+
+<!-- Package usage examples. -->
+
+<section class="examples">
+
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var nextGraphemeClusterBreak = require( '@stdlib/string-next-grapheme-cluster-break' );
+
+var out = nextGraphemeClusterBreak( 'last man standing', 4 );
+// returns 5
+
+out = nextGraphemeClusterBreak( 'presidential election', 8 );
+// returns 9
+
+out = nextGraphemeClusterBreak( 'अनुच्छेद', 1 );
+// returns 3
+
+out = nextGraphemeClusterBreak( '🌷', 0 );
+// returns -1
+```
+
+</section>
+
+<!-- /.examples -->
+
+<!-- Section for describing a command-line interface. -->
+
+* * *
+
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use the module as a general utility, install the module globally
+
+```bash
+npm install -g @stdlib/string-next-grapheme-cluster-break
+```
+
+</section>
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: next-grapheme-cluster-break [options] [<string>]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --from index          Starting search position in string. Default: 0.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- CLI usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ next-grapheme-cluster-break --from=1 अनुच्छेद
+3
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n 'अनुच्छेद' | next-grapheme-cluster-break --from=1
+3
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
+
+<!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="references">
+
+</section>
+
+<!-- /.references -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+
+<section class="main-repo" >
+
+* * *
+
+## Notice
+
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+
+For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
+
+---
+
+## License
+
+See [LICENSE][stdlib-license].
+
+
+## Copyright
+
+Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
+
+</section>
+
+<!-- /.stdlib -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="links">
+
+[npm-image]: http://img.shields.io/npm/v/@stdlib/string-next-grapheme-cluster-break.svg
+[npm-url]: https://npmjs.org/package/@stdlib/string-next-grapheme-cluster-break
+
+[test-image]: https://github.com/stdlib-js/string-next-grapheme-cluster-break/actions/workflows/test.yml/badge.svg
+[test-url]: https://github.com/stdlib-js/string-next-grapheme-cluster-break/actions/workflows/test.yml
+
+[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-next-grapheme-cluster-break/main.svg
+[coverage-url]: https://codecov.io/github/stdlib-js/string-next-grapheme-cluster-break?branch=main
+
+[dependencies-image]: https://img.shields.io/david/stdlib-js/string-next-grapheme-cluster-break
+[dependencies-url]: https://david-dm.org/stdlib-js/string-next-grapheme-cluster-break/main
+
+[stdlib]: https://github.com/stdlib-js/stdlib
+
+[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
+
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/string-next-grapheme-cluster-break/main/LICENSE
+
+[standard-streams]: https://en.wikipedia.org/wiki/Standard_streams
+
+[utf-16]: https://en.wikipedia.org/wiki/UTF-16
+
+</section>
+
+<!-- /.links -->
