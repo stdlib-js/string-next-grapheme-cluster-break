@@ -194,6 +194,20 @@ $ echo -n 'अनुच्छेद' | next-grapheme-cluster-break --from=1
 
 <!-- /.references -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/string/num-grapheme-clusters`][@stdlib/string/num-grapheme-clusters]: return the number of grapheme clusters in a string.
+
+</section>
+
+<!-- /.related -->
+
 <!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
 
@@ -254,6 +268,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [standard-streams]: https://en.wikipedia.org/wiki/Standard_streams
 
 [utf-16]: https://en.wikipedia.org/wiki/UTF-16
+
+<!-- <related-links> -->
+
+[@stdlib/string/num-grapheme-clusters]: https://github.com/stdlib-js/string-num-grapheme-clusters
+
+<!-- </related-links> -->
 
 </section>
 
