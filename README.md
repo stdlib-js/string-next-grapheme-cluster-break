@@ -202,7 +202,7 @@ $ echo -n 'अनुच्छेद' | next-grapheme-cluster-break --from=1
 
 ## See Also
 
--   [`@stdlib/string/num-grapheme-clusters`][@stdlib/string/num-grapheme-clusters]: return the number of grapheme clusters in a string.
+-   <span class="package-name">[`@stdlib/string/num-grapheme-clusters`][@stdlib/string/num-grapheme-clusters]</span><span class="delimiter">: </span><span class="description">return the number of grapheme clusters in a string.</span>
 
 </section>
 

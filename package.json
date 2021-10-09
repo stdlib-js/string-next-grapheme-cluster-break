@@ -47,7 +47,8 @@
     "@stdlib/fs-read-file": "^0.0.x",
     "@stdlib/process-read-stdin": "^0.0.x",
     "@stdlib/streams-node-stdin": "^0.0.x",
-    "@stdlib/string-code-point-at": "^0.0.x"
+    "@stdlib/string-code-point-at": "^0.0.x",
+    "@stdlib/string-tools-grapheme-cluster-break": "^0.0.x"
   },
   "devDependencies": {
     "@stdlib/assert-is-browser": "^0.0.x",
