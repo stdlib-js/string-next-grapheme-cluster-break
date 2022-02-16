@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/string-next-grapheme-cluster-break",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Return the next extended grapheme cluster break in a string after a specified position.",
   "license": "Apache-2.0",
   "author": {
