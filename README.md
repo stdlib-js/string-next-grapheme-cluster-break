@@ -63,7 +63,9 @@ If no recognized module system is present, access bundle contents via the global
 ```html
 <script type="text/javascript">
 (function () {
+(function () {
     window.nextGraphemeClusterBreak;
+})();
 })();
 </script>
 ```
@@ -117,6 +119,7 @@ var out = nextGraphemeClusterBreak( 'last man standing', 4 );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-next-grapheme-cluster-break@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
+(function () {
 
 var out = nextGraphemeClusterBreak( 'last man standing', 4 );
 // returns 5
@@ -130,6 +133,7 @@ out = nextGraphemeClusterBreak( 'अनुच्छेद', 1 );
 out = nextGraphemeClusterBreak( '🌷', 0 );
 // returns -1
 
+})();
 })();
 </script>
 </body>
@@ -241,7 +245,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/string/num-grapheme-clusters]: https://github.com/stdlib-js/string-num-grapheme-clusters/tree/umd
+[@stdlib/string/num-grapheme-clusters]: https://github.com/stdlib-js/string-num-grapheme-clusters/tree/umd/tree/umd
 
 <!-- </related-links> -->
 
