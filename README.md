@@ -34,38 +34,31 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/string-next-grapheme-cluster-break
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-nextGraphemeClusterBreak = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/string-next-grapheme-cluster-break@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var nextGraphemeClusterBreak = require( 'path/to/vendor/umd/string-next-grapheme-cluster-break/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-next-grapheme-cluster-break@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.nextGraphemeClusterBreak;
-})();
-</script>
+var nextGraphemeClusterBreak = require( '@stdlib/string-next-grapheme-cluster-break' );
 ```
 
 #### nextGraphemeClusterBreak( string\[, fromIndex] )
@@ -110,13 +103,8 @@ var out = nextGraphemeClusterBreak( 'last man standing', 4 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-next-grapheme-cluster-break@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var nextGraphemeClusterBreak = require( '@stdlib/string-next-grapheme-cluster-break' );
 
 var out = nextGraphemeClusterBreak( 'last man standing', 4 );
 // returns 5
@@ -129,11 +117,6 @@ out = nextGraphemeClusterBreak( 'अनुच्छेद', 1 );
 
 out = nextGraphemeClusterBreak( '🌷', 0 );
 // returns -1
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -142,7 +125,77 @@ out = nextGraphemeClusterBreak( '🌷', 0 );
 
 <!-- Section for describing a command-line interface. -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/string-next-grapheme-cluster-break-cli
+```
+
+</section>
+<!-- CLI usage documentation. -->
+
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: next-grapheme-cluster-break [options] [<string>]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --from index          Starting search position in string. Default: 0.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- CLI usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ next-grapheme-cluster-break --from=1 अनुच्छेद
+3
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n 'अनुच्छेद' | next-grapheme-cluster-break --from=1
+3
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -160,7 +213,7 @@ out = nextGraphemeClusterBreak( '🌷', 0 );
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/string/num-grapheme-clusters`][@stdlib/string/num-grapheme-clusters]</span><span class="delimiter">: </span><span class="description">return the number of grapheme clusters in a string.</span>
+-   <span class="package-name">[`@stdlib/string-num-grapheme-clusters`][@stdlib/string/num-grapheme-clusters]</span><span class="delimiter">: </span><span class="description">return the number of grapheme clusters in a string.</span>
 
 </section>
 
@@ -225,6 +278,10 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
+[cli-section]: https://github.com/stdlib-js/string-next-grapheme-cluster-break#cli
+[cli-url]: https://github.com/stdlib-js/string-next-grapheme-cluster-break/tree/cli
+[@stdlib/string-next-grapheme-cluster-break]: https://github.com/stdlib-js/string-next-grapheme-cluster-break/tree/main
+
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
@@ -241,7 +298,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/string/num-grapheme-clusters]: https://github.com/stdlib-js/string-num-grapheme-clusters/tree/umd
+[@stdlib/string/num-grapheme-clusters]: https://github.com/stdlib-js/string-num-grapheme-clusters
 
 <!-- </related-links> -->
 
