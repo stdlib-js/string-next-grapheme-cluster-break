@@ -45,14 +45,31 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/string-next-grapheme-cluster-break
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import nextGraphemeClusterBreak from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-next-grapheme-cluster-break@esm/index.mjs';
+var nextGraphemeClusterBreak = require( '@stdlib/string-next-grapheme-cluster-break' );
 ```
 
 #### nextGraphemeClusterBreak( string\[, fromIndex] )
@@ -97,13 +114,8 @@ var out = nextGraphemeClusterBreak( 'last man standing', 4 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import nextGraphemeClusterBreak from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-next-grapheme-cluster-break@esm/index.mjs';
+```javascript
+var nextGraphemeClusterBreak = require( '@stdlib/string-next-grapheme-cluster-break' );
 
 var out = nextGraphemeClusterBreak( 'last man standing', 4 );
 // returns 5
@@ -116,10 +128,6 @@ out = nextGraphemeClusterBreak( 'अनुच्छेद', 1 );
 
 out = nextGraphemeClusterBreak( '🌷', 0 );
 // returns -1
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -128,7 +136,77 @@ out = nextGraphemeClusterBreak( '🌷', 0 );
 
 <!-- Section for describing a command-line interface. -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/string-next-grapheme-cluster-break-cli
+```
+
+</section>
+<!-- CLI usage documentation. -->
+
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: next-grapheme-cluster-break [options] [<string>]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --from index          Starting search position in string. Default: 0.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- CLI usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ next-grapheme-cluster-break --from=1 अनुच्छेद
+3
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n 'अनुच्छेद' | next-grapheme-cluster-break --from=1
+3
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -161,7 +239,7 @@ out = nextGraphemeClusterBreak( '🌷', 0 );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -231,7 +309,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/string/num-grapheme-clusters]: https://github.com/stdlib-js/string-num-grapheme-clusters/tree/esm
+[@stdlib/string/num-grapheme-clusters]: https://github.com/stdlib-js/string-num-grapheme-clusters
 
 <!-- </related-links> -->
 
