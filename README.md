@@ -225,6 +225,7 @@ $ echo -n 'अनुच्छेद' | next-grapheme-cluster-break --from=1
 ## See Also
 
 -   <span class="package-name">[`@stdlib/string-num-grapheme-clusters`][@stdlib/string/num-grapheme-clusters]</span><span class="delimiter">: </span><span class="description">return the number of grapheme clusters in a string.</span>
+-   <span class="package-name">[`@stdlib/string-prev-grapheme-cluster-break`][@stdlib/string/prev-grapheme-cluster-break]</span><span class="delimiter">: </span><span class="description">return the previous extended grapheme cluster break in a string before a specified position.</span>
 
 </section>
 
@@ -310,6 +311,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 <!-- <related-links> -->
 
 [@stdlib/string/num-grapheme-clusters]: https://github.com/stdlib-js/string-num-grapheme-clusters
+
+[@stdlib/string/prev-grapheme-cluster-break]: https://github.com/stdlib-js/string-prev-grapheme-cluster-break
 
 <!-- </related-links> -->
 
