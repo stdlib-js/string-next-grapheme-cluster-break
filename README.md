@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import nextGraphemeClusterBreak from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-next-grapheme-cluster-break@esm/index.mjs';
+import nextGraphemeClusterBreak from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-next-grapheme-cluster-break@v0.2.2-esm/index.mjs';
 ```
 
 #### nextGraphemeClusterBreak( string\[, fromIndex] )
@@ -103,7 +103,7 @@ var out = nextGraphemeClusterBreak( 'last man standing', 4 );
 <body>
 <script type="module">
 
-import nextGraphemeClusterBreak from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-next-grapheme-cluster-break@esm/index.mjs';
+import nextGraphemeClusterBreak from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-next-grapheme-cluster-break@v0.2.2-esm/index.mjs';
 
 var out = nextGraphemeClusterBreak( 'last man standing', 4 );
 // returns 5
