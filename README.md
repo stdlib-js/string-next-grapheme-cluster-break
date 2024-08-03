@@ -45,104 +45,25 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
 
-```bash
-npm install @stdlib/string-next-grapheme-cluster-break
-```
 
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
--   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
-
-<section class="usage">
-
-## Usage
-
-```javascript
-var nextGraphemeClusterBreak = require( '@stdlib/string-next-grapheme-cluster-break' );
-```
-
-#### nextGraphemeClusterBreak( string\[, fromIndex] )
-
-Returns the next extended grapheme cluster break in a string after a specified position.
-
-```javascript
-var out = nextGraphemeClusterBreak( 'last man standing' );
-// returns 1
-```
-
-By default, the function searches for a grapheme cluster break starting from the first index. To specify an alternative starting search index, provide a `fromIndex` argument.
-
-```javascript
-var out = nextGraphemeClusterBreak( 'last man standing', 4 );
-// returns 5
-```
-
-</section>
-
-<!-- /.usage -->
 
 <!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
-<section class="notes">
 
-## Notes
-
--   If `string` is an empty string, the function returns `-1` irrespective of `fromIndex`.
--   If an extended grapheme cluster break does not exist after `fromIndex`, the function returns `-1`.
--   Note that `fromIndex` does **not** refer to a visual character position, but to an index in the ordered sequence of [UTF-16][utf-16] code units.
-
-</section>
-
-<!-- /.notes -->
 
 <!-- Package usage examples. -->
 
-<section class="examples">
 
-## Examples
-
-<!-- eslint no-undef: "error" -->
-
-```javascript
-var nextGraphemeClusterBreak = require( '@stdlib/string-next-grapheme-cluster-break' );
-
-var out = nextGraphemeClusterBreak( 'last man standing', 4 );
-// returns 5
-
-out = nextGraphemeClusterBreak( 'presidential election', 8 );
-// returns 9
-
-out = nextGraphemeClusterBreak( 'अनुच्छेद', 1 );
-// returns 3
-
-out = nextGraphemeClusterBreak( '🌷', 0 );
-// returns -1
-```
-
-</section>
-
-<!-- /.examples -->
 
 <!-- Section for describing a command-line interface. -->
 
-* * *
+
 
 <section class="cli">
 
-## CLI
+
 
 <section class="installation">
 
@@ -160,7 +81,7 @@ npm install -g @stdlib/string-next-grapheme-cluster-break-cli
 
 <section class="usage">
 
-### Usage
+## Usage
 
 ```text
 Usage: next-grapheme-cluster-break [options] [<string>]
@@ -188,7 +109,7 @@ Options:
 
 <section class="examples">
 
-### Examples
+## Examples
 
 ```bash
 $ next-grapheme-cluster-break --from=1 अनुच्छेद
@@ -222,10 +143,9 @@ $ echo -n 'अनुच्छेद' | next-grapheme-cluster-break --from=1
 
 <section class="related">
 
-* * *
-
 ## See Also
 
+-   <span class="package-name">[`@stdlib/string-next-grapheme-cluster-break`][@stdlib/string-next-grapheme-cluster-break]</span><span class="delimiter">: </span><span class="description">return the next extended grapheme cluster break in a string after a specified position.</span>
 -   <span class="package-name">[`@stdlib/string-num-grapheme-clusters`][@stdlib/string/num-grapheme-clusters]</span><span class="delimiter">: </span><span class="description">return the number of grapheme clusters in a string.</span>
 -   <span class="package-name">[`@stdlib/string-prev-grapheme-cluster-break`][@stdlib/string/prev-grapheme-cluster-break]</span><span class="delimiter">: </span><span class="description">return the previous extended grapheme cluster break in a string before a specified position.</span>
 
@@ -246,7 +166,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-#### Community
+### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -269,8 +189,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/string-next-grapheme-cluster-break.svg
-[npm-url]: https://npmjs.org/package/@stdlib/string-next-grapheme-cluster-break
+[npm-image]: http://img.shields.io/npm/v/@stdlib/string-next-grapheme-cluster-break-cli.svg
+[npm-url]: https://npmjs.org/package/@stdlib/string-next-grapheme-cluster-break-cli
 
 [test-image]: https://github.com/stdlib-js/string-next-grapheme-cluster-break/actions/workflows/test.yml/badge.svg?branch=main
 [test-url]: https://github.com/stdlib-js/string-next-grapheme-cluster-break/actions/workflows/test.yml?query=branch:main
