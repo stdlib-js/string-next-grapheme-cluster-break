@@ -48,7 +48,7 @@
     "@stdlib/process-read-stdin": "^0.2.3",
     "@stdlib/streams-node-stdin": "^0.2.3",
     "@stdlib/string-code-point-at": "^0.2.3",
-    "@stdlib/string-format": "^0.2.3",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.3",
     "@stdlib/string-tools-grapheme-cluster-break": "^0.2.4",
     "@stdlib/error-tools-fmtprodmsg": "^0.2.3"
   },
